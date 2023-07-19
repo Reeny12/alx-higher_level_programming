@@ -17,15 +17,18 @@ class Square(Rectangle):
         """
         super().__init__(size, size, x, y, id)
 
+
     @property
     def size(self):
         """Get/set the size of the Square."""
         return self.width
 
+
     @size.setter
     def size(self, value):
         self.width = value
         self.height = value
+
 
     def update(self, *args, **kwargs):
         """Update the Square.
@@ -38,6 +41,7 @@ class Square(Rectangle):
                 - 4th argument represents y attribute
             **kwargs (dict): New key/value pairs of attributes.
         """
+
         if args and len(args) != 0:
             a = 0
             for arg in args:
@@ -54,6 +58,7 @@ class Square(Rectangle):
                     self.y = arg
                 a += 1
 
+
         elif kwargs and len(kwargs) != 0:
             for k, v in kwargs.items():
                 if k == "id":
@@ -68,6 +73,7 @@ class Square(Rectangle):
                 elif k == "y":
                     self.y = v
 
+
     def to_dictionary(self):
         """Return the dictionary representation of the Square."""
         return {
@@ -76,6 +82,7 @@ class Square(Rectangle):
             "x": self.x,
             "y": self.y
         }
+
 
     def __str__(self):
         """Return the print() and str() representation of a Square."""
