@@ -1,2 +1,3 @@
 -- a script that lists all the tables of a database in your MySQL server.
-SHOW tables;
+
+DROP DATABASE IF EXISTS hbtn_0c_0;
